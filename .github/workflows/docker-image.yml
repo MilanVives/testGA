@@ -16,3 +16,8 @@ jobs:
       run: |
         docker build -t dimilan/3sdevops-backend:latest ./backend 
         docker build -t dimilan/3sdevops-frontend:latest ./frontend
+    - name: push image to docker hub
+      run: |
+        docker login -u dimilan -p ${{ secrets.DOCKERHUBTOKEN }}
+        docker push dimilan/3sdevops-backend:latest
+        docker push dimilan/3sdevops-frontend:latest
