@@ -11,5 +11,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - name: Build the Docker image
-      run: docker build -t dimilan/testimage:$(date +%s) ./backend
+    - name: Build the backend Docker image
+      #run: docker build -t dimilan/3sdevops-backend:latest ./backend
+      run: |
+        docker build -t dimilan/3sdevops-backend:latest ./backend 
+        docker build -t dimilan/3sdevops-frontend:latest ./frondtend 
