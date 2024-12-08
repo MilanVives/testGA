@@ -1,13 +1,7 @@
 name: Build and Publish image to Docker Hub
-on:
-  [workflow-dispatch] # manual run via github actions
-  #push:
-  #  branches:
-  #    - ci-cd
-  #  paths:
-  #    - 'backend/'
-  #    - 'frontend/'
-
+on: 
+  workflow_dispatch
+  
 jobs:
   publish_images:
     runs-on: ubuntu-latest
