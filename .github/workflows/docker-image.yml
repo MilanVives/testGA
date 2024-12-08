@@ -15,4 +15,4 @@ jobs:
       #run: docker build -t dimilan/3sdevops-backend:latest ./backend
       run: |
         docker build -t dimilan/3sdevops-backend:latest ./backend 
-        docker build -t dimilan/3sdevops-frontend:latest ./frondtend 
+        docker build -t dimilan/3sdevops-frontend:latest ./frontend
