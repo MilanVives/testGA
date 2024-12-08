@@ -8,11 +8,11 @@ jobs:
       - name: checkout
         uses: actions/checkout@v4
       - name: build image
-        run:
+        run: |
           docker build ./backend/ -t dimilan/3sdevops-backend:latest
           docker build ./frontend/ -t dimilan/3sdevops-frontend:latest
       - name: push image to docker hub
-        run:
+        run: |
           docker login -u dimilan -p ${{ secrets.DOCKERHUBTOKEN }}
           docker push dimilan/3sdevops-backend:latest
           docker push dimilan/3sdevops-frontend:latest
